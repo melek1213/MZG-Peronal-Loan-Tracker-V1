@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Melbourne Lending System" />
+  <title>Melbourne Lending System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo">S</div>
+      <div><div class="brand-name">MELBOURNE</div><div class="brand-sub">Microfinance Suite</div></div>
+    </div>
+    <div class="nav-label">MENU</div>
+    <nav id="mainNav">
+      <button class="nav-btn active" data-view="dashboard"><span>▦</span>Dashboard</button>
+      <button class="nav-btn" data-view="borrowers"><span>♙</span>Borrowers</button>
+      <button class="nav-btn" data-view="loans"><span>♧</span>Active Loans</button>
+      <button class="nav-btn" data-view="overdue"><span>ⓘ</span>Overdue Monitoring</button>
+    </nav>
+    <div class="nav-label">FINANCIAL</div>
+    <nav>
+      <button class="nav-btn" data-view="capital"><span>▱</span>Capital</button>
+      <button class="nav-btn" data-view="expenses"><span>▤</span>Expenses</button>
+    </nav>
+    <div class="nav-label">TOOLS</div>
+    <nav>
+      <button class="nav-btn" data-view="settings"><span>⚙</span>Settings</button>
+      <button class="nav-btn" data-view="calculator"><span>⊙</span>Loan Calculator</button>
+      <button class="nav-btn" data-view="agreement"><span>▣</span>Loan Agreement</button>
+      <button class="nav-btn" data-view="collectors"><span>♙</span>Collectors / Agents</button>
+      <button class="nav-btn" data-view="reports"><span>◌</span>Reports</button>
+      <button class="nav-btn" data-view="tour"><span>?</span>Virtual Tour</button>
+    </nav>
+    <div class="sidebar-help">
+      <div class="help-icon">◔</div>
+      <h4>Need assistance?</h4>
+      <p>Contact your configured support address for lending-system help.</p>
+      <button class="support-btn" id="supportBtn">◔&nbsp; Contact Support</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="pageTitle">Lending Report</h1>
+        <div class="date-line" id="pageDate"></div>
+      </div>
+      <div class="top-actions">
+        <div class="search-wrap"><span>⌕</span><input id="globalSearch" placeholder="Search the current list..." /></div>
+        <button class="circle-btn" title="Notifications">♧</button>
+        <button class="circle-btn" id="themeBtn" title="Theme">☼</button>
+        <button class="circle-btn" title="Help">?</button>
+        <button class="workspace-pill">▥&nbsp; MELBOURNE</button>
+      </div>
+    </header>
+
+    <section class="page-content" id="app"></section>
+  </main>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <div class="modal-card" id="modalCard">
+      <div class="modal-head"><h2 id="modalTitle"></h2><button class="modal-close" id="modalClose">×</button></div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
